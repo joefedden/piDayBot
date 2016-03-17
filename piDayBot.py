@@ -20,12 +20,12 @@ api = tweepy.API(auth)
 while(True):
 	hour = datetime.datetime.now().time().hour
 	minutes = datetime.datetime.now().time().minute
-	AMmessage = "It's Pi Time at " + str(currTime) + " AM!"
+	AMmessage = "It's Pi Time at 3:14 AM!"
 	PMmessage = "It's Pi Time at 3:14 PM!"
-	if (hour == 3 and minutes == 14):
+	if hour == 10 and minutes == 14:
 		api.update_status(status=AMmessage)
 		print("Posted at " + currTime)
-	if (hour == 15 and minutes == 14):
+	if hour == 22 and minutes == 14:
 		api.update_status(status=PMmessage)
 		print("Posted at " + currTime)
 	time.sleep(60)
